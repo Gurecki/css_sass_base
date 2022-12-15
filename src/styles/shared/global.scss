@@ -121,3 +121,23 @@ li::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+html {
+  font-size: 10px;
+}
+.card {
+  font-size: 16px;
+}
+
+.card__top-text, .card__title-section {
+  font-size: 2rem; //relative to html, whole document
+  font-size: 2em; // <- relative to parent
+}
+
+.card h1 {
+  font-size: 2rem;
+
+  // DEG example:
+  // transform: rotate(41deg);
+  // display: inline-block;
+}
