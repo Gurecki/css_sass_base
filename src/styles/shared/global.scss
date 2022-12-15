@@ -110,20 +110,20 @@ input[type=text] {
 // }
 
 
-li::before {
-  content: "";
-  background-image: url('/assets/icons/checkmark.svg');
-// BASE 64-encoded is fine too:
-  // background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='46.124px' height='46.125px' viewBox='0 0 46.124 46.125' style='enable-background:new 0 0 46.124 46.125;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M37.727,0.062H8.397C3.759,0.062,0,3.822,0,8.46v29.204c0,4.639,3.759,8.398,8.397,8.398h29.33 c4.637,0,8.397-3.76,8.397-8.398V8.46C46.125,3.822,42.365,0.062,37.727,0.062z M38.007,19.14L22.142,35.005 c-0.673,0.674-1.586,1.052-2.538,1.052s-1.865-0.379-2.538-1.052l-7.863-7.863c-1.401-1.402-1.401-3.674,0.001-5.077 c0.673-0.673,1.585-1.051,2.537-1.051c0.952,0,1.864,0.378,2.537,1.051l4.686,4.687c0.17,0.17,0.401,0.266,0.641,0.266 c0.24,0,0.471-0.096,0.641-0.266l12.686-12.687c0.674-0.673,1.586-1.052,2.539-1.052c0.951,0.001,1.864,0.379,2.537,1.052 C39.409,15.467,39.409,17.739,38.007,19.14z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+// li::before {
+//   content: "";
+//   background-image: url('/assets/icons/checkmark.svg');
+// // BASE 64-encoded is fine too:
+//   // background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='46.124px' height='46.125px' viewBox='0 0 46.124 46.125' style='enable-background:new 0 0 46.124 46.125;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M37.727,0.062H8.397C3.759,0.062,0,3.822,0,8.46v29.204c0,4.639,3.759,8.398,8.397,8.398h29.33 c4.637,0,8.397-3.76,8.397-8.398V8.46C46.125,3.822,42.365,0.062,37.727,0.062z M38.007,19.14L22.142,35.005 c-0.673,0.674-1.586,1.052-2.538,1.052s-1.865-0.379-2.538-1.052l-7.863-7.863c-1.401-1.402-1.401-3.674,0.001-5.077 c0.673-0.673,1.585-1.051,2.537-1.051c0.952,0,1.864,0.378,2.537,1.051l4.686,4.687c0.17,0.17,0.401,0.266,0.641,0.266 c0.24,0,0.471-0.096,0.641-0.266l12.686-12.687c0.674-0.673,1.586-1.052,2.539-1.052c0.951,0.001,1.864,0.379,2.537,1.052 C39.409,15.467,39.409,17.739,38.007,19.14z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+//   width: 20px;
+//   height: 20px;
+//   display: inline-block;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
 
 html {
-  font-size: 10px;
+  // font-size: 10px;
 }
 .card {
   font-size: 16px;
@@ -147,6 +147,128 @@ html {
   background-color: aliceblue;
   background-color: #000000;
   background-color: rgba(0,0,0,0.2);
-  background-color: hsl(20, 20, 20);
-
+  background-color: rgb(223, 212, 206);
 }
+
+
+p {
+  font-size: 2rem;
+  font-variant: small-caps; //rarely used
+  text-transform: capitalize;
+  line-height: 3rem;
+  font-weight: 700;
+  text-decoration: double;
+  font-style: italic;
+  letter-spacing: 6px;
+  text-shadow: 5px -3px 9px #00000082;
+  text-align: center;
+}
+
+
+.trwam-nav {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)), url(/assets/images/header_bg.png);
+
+  // &::after {
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   background-image: ;
+  //   left: 0;
+  // }
+
+  &__links {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    padding: 0 0 0 50px;
+
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  &__link  {
+    margin: 0 40px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    z-index: 2;
+  }
+
+  &__search {
+    position: relative;
+
+    &::after {
+      content: '🔍';
+      position: absolute;
+      right: 4px;
+      top: 0;
+    }
+  }
+}
+
+
+
+.three-columns {
+  display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: 
+  'nav nav side'
+  'buttons articles side'
+  ;
+  grid-auto-rows: 200px;
+}
+.three-columns__column {
+  &:nth-child(1) {
+    background-color: gray;
+    grid-area: side;
+  }
+  &:nth-child(2) {
+    background-color: yellow;
+    grid-area: nav;
+  }
+  &:nth-child(3) {
+    background-color: rebeccapurple;
+    grid-area: articles;
+  }
+  &:nth-child(4) {
+    background-color: aqua;
+    grid-area: buttons;
+  }
+  &:nth-child(5) {
+    background-color: burlywood;
+  }
+  &:nth-child(6) {
+    background-color: darkmagenta;
+  }
+}
+
+
+.xiaomi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: 500px;
+
+  &__tile {
+    &--half {
+      grid-column: 1/3;
+    }
+  }
+}
+
+
+
