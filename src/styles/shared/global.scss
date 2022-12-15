@@ -32,8 +32,16 @@ h1 {
 li {
   display: inline-block;
 }
+// p {
+//   display: inline-block;
+// }
 // :hover
 // to style element when it's hovered:
 li:hover {
   cursor: pointer;
+}
+
+//under n: 0, 1, 2, 3, 4, 5... etc etc
+li:nth-child(3n + 1) {
+  background-color: greenyellow;
 }
