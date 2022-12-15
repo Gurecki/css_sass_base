@@ -30,11 +30,11 @@ h1 {
   list-style: none;
 }
 li {
+  // display: inline-block;
+}
+p {
   display: inline-block;
 }
-// p {
-//   display: inline-block;
-// }
 // :hover
 // to style element when it's hovered:
 li:hover {
@@ -42,6 +42,80 @@ li:hover {
 }
 
 //under n: 0, 1, 2, 3, 4, 5... etc etc
-li:nth-child(3n + 1) {
-  background-color: greenyellow;
+// li:nth-child(3n - 4) {
+//   background-color: greenyellow;
+// }
+
+li:last-child {
+  // background-color: red;
+}
+li:first {
+  // background-color: pink;
+}
+
+// Every child in a tree
+li p {
+  // font-size: 20px;
+}
+
+//Only direct children
+li > p {
+  // font-size: 20px;
+}
+
+//Element next to
+// p + h2 {
+//   font-size: 30px;
+// }
+
+// p ~ h2 {
+//   font-size: 40px;
+// }
+
+input[type=text] {
+  border: 1px solid darkblue;
+}
+
+
+// html {
+//   ...
+// }
+
+// html ul li {
+
+// }
+
+// .box-test {
+
+// }
+
+// .box-test.test {
+
+// }
+
+// .box-test .test {
+
+// }
+
+// ul > li {
+
+// }
+
+// #id {
+
+// }
+
+// input[type=password] {
+
+// }
+
+
+li::before {
+  content: "";
+  background-image: url('/assets/icons/checkmark.svg');
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
