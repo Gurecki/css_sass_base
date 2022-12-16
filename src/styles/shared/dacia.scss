@@ -1,7 +1,10 @@
 @use 'variables' as *;
 @use 'mixins' as m;
+@use 'library' with (
+    $margin-size: 30px
+);
+@use 'functions' as f;
 
-$font-size: 20px;
 
 @font-face {
     font-family: Dacia;
@@ -105,6 +108,10 @@ body {
     border-radius: 2px;
     gap: 60px;
     justify-content: space-between;
+
+    &:after {
+        content: '#{f.obliczPoleKola(10)}';
+    }
 
     @include m.mobile {
         padding: 10px;

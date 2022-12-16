@@ -4,7 +4,13 @@
     }
 };
 
-@mixin font-props($font-size, $font-weight, $line-height) {
+@mixin font-props($args...) {
+
+    @include font-props-extra($args...);
+    @warn 'Please use font-props-extra() mixin, font-props is depricated and will be removed in the future release.';
+}
+
+@mixin font-props-extra($font-size, $font-weight, $line-height) {
     font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;
