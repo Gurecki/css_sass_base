@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Dacia;
+    src: url(/assets/fonts/medium-v3100-Latin-Cyrillic-8dbe471a2385f12ee572.woff2);
+}
+* {
+    font-family: Dacia;
+}
+body {
+    margin: 0;
+}
+
+.dacia-header {
+    display: flex;
+    height: 700px;
+    gap: 5px;
+    color: white;
+
+    margin-bottom: 40px;
+
+    &__big-banner {
+      flex-grow: 1;
+      background-image: url(/assets/images/6f8c490455.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      background-position: center;
+    }
+    &__heading {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+
+        &--smaller {
+            font-size: 30px;
+        }
+    }
+    &__cta-link {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    &__right {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__right-tile1 {
+        padding: 40px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(/assets/images/7872d3143b.webp);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        height: 60%;
+        display: flex;
+    }
+    &__right-tile2 {
+        padding: 40px;
+        background-color: #646b52;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        height: 40%;
+        display: flex;
+    }
+  }
+
+
+  .dacia-banner {
+    margin: 0 80px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    gap: 60px;
+    justify-content: space-between;
+
+    &__image {
+        max-height: 100%;
+        object-fit: scale-down;
+        border-radius: 2px;
+    }
+
+    &__text {
+        font-size: 30px;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 20px 0;
+        color: white;
+        background-color: #646b52;
+        text-transform: uppercase;
+        border: none;
+        transition: all 0.2s ease-in-out;
+
+        &--white {
+            color: black;
+            background-color: white;
+            border: 1px solid #646b52;
+        }
+
+        &:hover {
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+    }
+  }
