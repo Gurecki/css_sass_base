@@ -1,8 +1,8 @@
 @use 'variables' as *;
 @use 'mixins' as m;
-@use 'library' with (
-    $margin-size: 30px
-);
+// @use 'library' with (
+//     $margin-size: 30px
+// );
 @use 'functions' as f;
 
 
@@ -27,17 +27,18 @@ body {
     gap: 5px;
     color: white;
 
-    @media screen and (max-width: 1200px) {
-        color: green;
-    }
+    // NATIVE MEDIA SCREENS EXAMPLE:
+    // @media screen and (max-width: 1200px) {
+    //     color: green;
+    // }
 
-    @media screen and (min-width: 700px) {
-        color: red;
-    }
+    // @media screen and (min-width: 700px) {
+    //     color: red;
+    // }
 
-    @media screen and (min-width: 750px) and (max-width: 800px) {
-        color: pink;
-    }
+    // @media screen and (min-width: 750px) and (max-width: 800px) {
+    //     color: pink;
+    // }
 
     margin-bottom: 40px;
 
@@ -53,7 +54,7 @@ body {
       background-position: center;
     }
     &__heading {
-        font-size: 40px;
+        font-size: f.remify(40px);
         font-weight: 700;
         margin: 0;
         text-transform: uppercase;
@@ -109,9 +110,10 @@ body {
     gap: 60px;
     justify-content: space-between;
 
-    &:after {
-        content: '#{f.obliczPoleKola(10)}';
-    }
+    //USING FUNCTION FROM SASS:
+    // &:after {
+    //     content: '#{f.obliczPoleKola(10)}';
+    // }
 
     @include m.mobile {
         padding: 10px;
@@ -158,12 +160,5 @@ body {
             color: white;
             cursor: pointer;
         }
-    }
-}
-
-
-div, h1, h2, h3 {
-    > p {
- 
     }
 }

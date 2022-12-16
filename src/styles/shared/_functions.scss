@@ -3,3 +3,8 @@
 @function obliczPoleKola($r) {
     @return math.$pi  * $r * $r;
 }
+
+@function remify($value-in-px) {
+    $one-rem: 16px;
+    @return #{$value-in-px/16px}rem
+}
