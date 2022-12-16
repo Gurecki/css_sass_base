@@ -27,6 +27,10 @@ body {
     gap: 5px;
     color: white;
 
+    @include m.mobile {
+        height: auto;
+        flex-direction: column;
+    }
     // NATIVE MEDIA SCREENS EXAMPLE:
     // @media screen and (max-width: 1200px) {
     //     color: green;
