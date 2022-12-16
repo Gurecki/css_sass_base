@@ -1,4 +1,6 @@
 //GLOBALS: 
 // @import './shared/global';
-@import './shared/dacia'
+// @import './shared/dacia'
+@use './shared/dacia' as *;
+
 // COMPONENTS:

@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @font-face {
     font-family: Dacia;
     src: url(/assets/fonts/medium-v3100-Latin-Cyrillic-8dbe471a2385f12ee572.woff2);
@@ -9,11 +11,27 @@ body {
     margin: 0;
 }
 
+// :root {
+//     --green-background: #646b52;
+// }
+
 .dacia-header {
     display: flex;
     height: 700px;
     gap: 5px;
     color: white;
+
+    @media screen and (max-width: 1200px) {
+        color: green;
+    }
+
+    @media screen and (min-width: 700px) {
+        color: red;
+    }
+
+    @media screen and (min-width: 750px) and (max-width: 800px) {
+        color: pink;
+    }
 
     margin-bottom: 40px;
 
@@ -64,7 +82,7 @@ body {
     }
     &__right-tile2 {
         padding: 40px;
-        background-color: #646b52;
+        background-color: $green-background;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
@@ -73,7 +91,6 @@ body {
         display: flex;
     }
 }
-
 
 .dacia-banner {
     margin: 0 80px;
@@ -107,7 +124,7 @@ body {
         width: 100%;
         padding: 20px 0;
         color: white;
-        background-color: #646b52;
+        background-color: $green-background;
         text-transform: uppercase;
         border: none;
         transition: all 0.2s ease-in-out;
@@ -115,7 +132,7 @@ body {
         &--white {
             color: black;
             background-color: white;
-            border: 1px solid #646b52;
+            border: 1px solid $green-background;
         }
 
         &:hover {
@@ -123,5 +140,12 @@ body {
             color: white;
             cursor: pointer;
         }
+    }
+}
+
+
+div, h1, h2, h3 {
+    > p {
+ 
     }
 }
