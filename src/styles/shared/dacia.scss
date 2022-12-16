@@ -1,4 +1,7 @@
 @use 'variables' as *;
+@use 'mixins' as m;
+
+$font-size: 20px;
 
 @font-face {
     font-family: Dacia;
@@ -102,6 +105,14 @@ body {
     border-radius: 2px;
     gap: 60px;
     justify-content: space-between;
+
+    @include m.mobile {
+        padding: 10px;
+        gap: 20px;
+        height: 100px;
+
+        @include m.font-props(12px, 700, 40px);
+    }
 
     &__image {
         max-height: 100%;
