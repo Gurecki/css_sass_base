@@ -1,0 +1,46 @@
+@use '../shared/mixins' as m;
+
+.navi {
+    $naviPadding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: calc(100% - $naviPadding*2);
+    z-index: 2;
+    padding: $naviPadding;
+
+    &__list, &__sm-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__list {
+        &-item {
+            @include m.font-props(20px, 500, 30px);
+            margin-right: 20px;
+
+            &-link {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__sm-list {
+        &-item {
+            margin-left: 20px;
+
+            &-icon {
+                width: 40px;
+                height: 40px;
+                fill: white;
+            }
+        }
+    }
+}
