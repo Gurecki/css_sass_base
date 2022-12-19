@@ -1,0 +1,35 @@
+@use '../shared/mixins' as m;
+
+.video-header {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &__video-file {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    &__texts-wrapper {
+        z-index: 10;
+        text-align: center;
+    }
+
+    &__text {
+        color: white;
+        @include m.font-props(60px, 400, 30px);
+    }
+
+    &__button {
+        border: 2px solid white;
+        border-radius: 0;
+        padding: 10px 20px;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        @include m.font-props(30px, 400, 30px);
+    }
+}
