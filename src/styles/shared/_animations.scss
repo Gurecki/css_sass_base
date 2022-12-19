@@ -2,6 +2,7 @@
     0% {
         filter: hue-rotate(0deg);
         filter: brightness(1);
+        transform: scale(1);
     }
 
     50% {
@@ -11,6 +12,7 @@
     100% {
         filter: hue-rotate(90deg);
         filter: brightness(1);
+        transform: scale(1.2);
     }
 }
 
@@ -21,10 +23,13 @@
 
     25% {
         transform: translate(0,100px);
+        background-position: 100px;
+
     }
 
     50% {
         transform: translate(100px,100px);
+
     }
 
     75% {
@@ -33,5 +38,6 @@
 
     100% {
         transform: translate(0, 0);
+
     }
 }
