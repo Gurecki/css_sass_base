@@ -9,15 +9,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
         { 
             scrollTrigger: {
                 trigger: '.boxes__box:first-child',
-                start: 'top center',
+                start: 'top center', //ELEMENT, VIEWPORT
                 markers: true,
-                scrub: true,
-                toggleClass: 'my-class'
+                toggleActions: 'play pause resume reverse'
+                // pin: true
+                // scrub: true,
             },
-            yoyo: true,
+            yoyo: true
         }
         );
-    tl.to('.boxes__box', {duration: 1, translateX: 'random(200, 600)', ease: 'ease', 
-});
+    // tl.to('.boxes__box', {duration: 1, translateX: 'random(200, 600)', ease: 'ease', });
+    tl.fromTo('.boxes__box', {opacity: 0, y: -100}, {opacity: 1, y: 0, stagger: 0.1});
     // tl.to('.boxes__box:first-child', {backgroundColor: 'blue'});
 })()
